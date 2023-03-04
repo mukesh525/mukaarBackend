@@ -9,7 +9,7 @@ let fs = require("fs");
 aws.config.update({
   secretAccessKey: config.AWS_SECRET_ACCESS_KEY,
   accessKeyId: config.AWS_ACCESS_KEY_ID,
-  region: "us-east-1"
+  region: "ap-south-1"
 });
 
 let ses = new aws.SES();
