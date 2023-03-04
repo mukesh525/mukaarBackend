@@ -4,10 +4,13 @@ const express = require("express");
 const router = express.Router();
 const { Contact } = require("../models/contact_us");
 
+const { sendTextEmail } = require("../utils/email");
+
 router.post("/", async (req, res) => {
 
   let user = new Contact(_.pick(req.body, ["email", "phone"]));
   await user.save();
+  sendTextEmail("Mukaar New Contact Form", `Mukaar New Contact Form email : ${req.body.email} phone : ${req.body.phone}`, "mukeshjha2007@gmail.com");
   res
     .status(200)
     .send({ message: "Contact Updated Successfully" });
