@@ -3,6 +3,6 @@ module.exports = {
   SECRET: process.env.SECRET || "secret",
   SECRET: process.env.SECRET || "secret",
   AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
-  BUCKET: "wholesomeapp",
+  BUCKET: "mukaar",
   AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
 };
